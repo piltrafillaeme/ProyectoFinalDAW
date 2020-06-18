@@ -1,0 +1,177 @@
+/* -------------------------------------------------------------------------- */
+/*                                 VER EXAMEN                                 */
+/* -------------------------------------------------------------------------- */
+.verExamen h4 {
+    text-align: center;
+}
+.verExamen td {
+    vertical-align: middle;
+}
+
+.imagenExamen {
+    display: flex;
+    justify-content: center;
+}
+
+table.verExamen, thead.verExamen, th.verExamen, tr.verExamen, td.acciones {
+    border: #d8d6d6 1px solid;
+    
+}
+
+table.verExamen{
+    border-radius: 1em/5em;
+}
+tr.division {
+    border-bottom: #d8d6d6 1px solid;
+}
+.wrapper {
+    min-width: fit-content !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              CARDS DE LISTADOS                             */
+/* -------------------------------------------------------------------------- */
+
+/* CABECERA */
+
+.card-header {
+    background-color:rgb(65, 71, 77);
+}
+
+.card-header button {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.card-header button:hover {
+    background-color:  rgb(218, 197, 84);
+    border-color:rgb(218, 197, 84);
+}
+
+.card-header a, .guardaAlumna {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.card-header a:hover {
+    background-color:  rgb(218, 197, 84);
+    border-color:rgb(218, 197, 84);
+}
+
+.guardaPregunta {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+button.guardaPregunta:hover {
+    background-color:  rgb(218, 197, 84);
+    border-color:rgb(218, 197, 84);
+}
+
+.guardaAlumna {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+button.guardaAlumna:hover {
+    background-color:  rgb(218, 197, 84);
+    border-color:rgb(218, 197, 84);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 BREADCRUMS                                 */
+/* -------------------------------------------------------------------------- */
+
+.breadcrumb-item a{
+    color:rgb(65, 71, 77);
+}
+
+.breadcrumb-item a:hover{
+    color:rgb(218, 197, 84);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              VENTANAS MODALES                              */
+/* -------------------------------------------------------------------------- */
+
+.modal-header {
+    background-color: #e0a800 !important;
+    border-color: #e0a800 !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                     BOTONES ACCIONES (SOBRE LOS TESTS)                     */
+/* -------------------------------------------------------------------------- */
+
+.btnVer {
+    background-color: #90AD4C;
+    border-color: #90AD4C;
+}
+
+.btnVer:hover {
+    background-color: rgba(144, 173, 76, 0.600);
+    border-color: transparent !important;
+}
+.btnNotas {
+    background-color: #FAE187;
+    border-color: #FAE187;
+}
+
+.btnNotas:hover {
+    background-color: rgba(250, 225, 135, 0.600);
+    border-color: transparent !important;
+}
+.btnEstadisticas {
+    background-color: #66D7D1;
+    border-color: #66D7D1;
+}
+
+.btnEstadisticas:hover {
+    background-color: rgba(102, 215, 209, 0.600);
+    border-color: transparent !important;
+}
+
+.btnEditar {
+    background-color: #E07A5F;
+    border-color: #E07A5F;
+}
+
+.btnEditar:hover {
+    background-color: rgba(224, 123, 95, 0.600);
+    border-color: transparent !important;
+}
+
+.btnAñadir {
+    background-color: #5B8E7D;
+    border-color: #5B8E7D;
+}
+
+.btnAñadir:hover {
+    background-color: rgba(91, 142, 125, 0.600);
+    border-color: transparent !important;
+}
+
+.btnEliminar {
+    background-color: #BC4B51;
+    border-color: #BC4B51;
+}
+
+.btnEliminar:hover {
+    background-color: rgba(188, 75, 81, 0.600);
+    border-color: transparent !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 PAGINACIÓN                                 */
+/* -------------------------------------------------------------------------- */
+
+.page-item.active .page-link {
+    background-color: rgb(65, 71, 77);
+    border-color: rgb(65, 71, 77);
+}
+
+.page-link {
+    color: rgb(65, 71, 77);
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}

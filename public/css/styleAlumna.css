@@ -1,0 +1,180 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+
+    margin-bottom: 60px;
+}
+
+/* #contenidoAlumna {
+    margin-bottom: 7vh;
+} */
+
+.contenido{
+    padding-bottom: 60px;
+}
+
+.card-body {
+    height: 100%;
+    margin: 0;
+}
+nav.header-alumna {
+    background-color: rgb(30, 166, 190)!important;
+    /* height: 13vh; */
+    font-size: 3vh;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   INICIO                                   */
+/* -------------------------------------------------------------------------- */
+
+.bienvenida {
+    margin: 7vh;
+}
+
+.bienvenida h5 {
+    font-size: 7vh;
+}
+
+.zonaBotones {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tarjeta {
+    width: 50vh !important;
+}
+
+.tarjeta .card-header {
+    background-color: rgb(30, 166, 190)!important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  VER NOTAS                                 */
+/* -------------------------------------------------------------------------- */
+
+.tablaNotas {
+    margin: 20px;
+    min-width: fit-content !important;
+}
+
+.tablaNotas .card-header {
+    background-color:rgb(77, 86, 95)!important;
+    color: whitesmoke;
+}
+
+.tablaNotas thead td.temita{
+    /* background-color: rgb(218, 197, 84); */
+    background-color: #FFCA28;
+}
+
+.tablaNotas thead td.testito{
+    /* background-color: rgb(84, 218, 84); */
+    background-color: #FF8F00;
+}
+
+.tablaNotas thead td.notita{
+    /* background-color: rgb(218, 84, 147); */
+    background-color: #db5f00;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  VER TEMAS                                 */
+/* -------------------------------------------------------------------------- */
+
+.zonaBotonesTema, .zonaBotones {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+}
+
+.test {
+    margin: 10vh;
+    margin-top: 5vh !important;
+}
+
+.test .card-header {
+    background-color:rgb(77, 86, 95)!important;
+    color: whitesmoke;
+}
+
+.botonTests p{
+    text-align: center;
+}
+
+.botonTests a {
+    background-color:rgb(218, 197, 84);
+}
+
+.botonTemas a, .botonTemas p { 
+    font-size: x-large;
+}
+
+.botonNotas a, .botonNotas p { 
+    font-size: x-large;
+}
+
+.card-header h6{
+    font-size: xx-large;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  VER TESTS                                 */
+/* -------------------------------------------------------------------------- */
+
+.testsTemas {
+    margin-top: 3vh;
+}
+
+.botonTests p {
+    font-size: larger;
+}
+
+.botonTests a, .botonTests p { 
+    font-size: x-large;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                      VER TEST (preguntas + respuestas)                     */
+/* -------------------------------------------------------------------------- */
+
+.zonaPreguntas {
+
+    margin-bottom: 70px;
+}
+.respuestasTabla {
+    width: auto !important;
+}
+
+.tablaPreguntas {
+    margin: 3vh;
+}
+
+p.preguntas {
+    margin: 2vh;
+    font-size: larger;
+}
+
+.respuestasTabla span {
+    font-size: larger;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+.footer{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgb(30, 166, 190)!important;
+}
+
+.sierra-segura {
+    color: white;
+}

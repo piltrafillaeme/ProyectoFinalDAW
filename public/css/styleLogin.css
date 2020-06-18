@@ -1,0 +1,54 @@
+html{
+    position:relative;
+    min-height: 100%;
+}
+body{
+
+    margin-bottom: 60px;
+
+}
+
+#contenidoLogin{
+    padding-bottom: 60px;
+}
+
+#contenidoLogin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.zonaLogin {
+    padding: 5vh;
+    width: 50%;
+}
+
+.card-header {
+    background-color:rgb(65, 71, 77) !important;
+    text-align: center;
+    font-size: xx-large !important;
+}
+
+.card-body {
+    font-size: large !important;
+}
+
+.login {
+    background-color: #e0a800 !important;
+    border-color: #d39e00 !important;
+}
+
+
+.login:hover {
+    background-color:  rgb(218, 197, 84) !important;
+    border-color:rgb(218, 197, 84) !important;
+}
+
+
+.footer{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    bottom: 0px;
+}
+
