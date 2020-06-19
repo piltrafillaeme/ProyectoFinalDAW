@@ -105,10 +105,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                   
                                     @if (isset($alumnasA))
                                         @foreach ($alumnasA as $key => $alumna)
-                                        <tr>
+                                        <tr style="background-color: #F2F2F2">
                                             <td>{{$key+1}}</td>
                                             <td>{{$alumna->nombrealumna}}</td>
                                             <td>{{$alumna->apellidoalumna}}</td>
@@ -121,7 +120,7 @@
                                     @endif
                                     @if (isset($alumnasB))
                                         @foreach ($alumnasB as $key => $alumna)
-                                        <tr>
+                                        <tr style="background-color: #FFFFFF">
                                             <td>{{$key+1}}</td>
                                             <td>{{$alumna->nombrealumna}}</td>
                                             <td>{{$alumna->apellidoalumna}}</td>

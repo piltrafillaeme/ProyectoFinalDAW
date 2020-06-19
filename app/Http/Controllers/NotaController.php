@@ -64,7 +64,7 @@ class NotaController extends Controller
             /* Accedo solo a las notas: */
             /* return $todasNotas->values(); */
             $chart = new NotasChart;
-            $chart->labels(['aprobados', 'suspensos']);
+            $chart->labels(['Aprobados', 'Suspensos']);
             $chart->dataset('My dataset', 'doughnut', [$aprobados,$suspensos]);
 
             return view('profesor/notas.index', compact('chart', 'test','curso'));

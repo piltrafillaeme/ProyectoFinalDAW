@@ -306,8 +306,7 @@ class PreguntaController extends Controller
                 $request->imagenPregunta->storeAs('images', $nombreImagen, 'public');
                 $pregunta->imagen = $nombreImagen;
             } else if ($request->imagenPregunta != "null") {
-                dd($request->imagenPregunta);
-                dd("hola5");
+               
                 $pregunta->imagen = $request->imagenPregunta;
             } else {
                 /* dd("hola6"); */
@@ -404,7 +403,7 @@ class PreguntaController extends Controller
         
         /* Curso al que pertenece el test: */
         $curso = Curso::findorFail($idCurso);
-        return redirect()->route('tests.testscurso', $idCurso)->with('pregunta-eliminada', 'Pregunta eliminada correctamente.', array('eliminarPregunta'=>$eliminarPregunta, 'curso'=>$curso, 'test'=>$test,'coleccionPreguntas' => $coleccionPreguntas, 'coleccionRespuestas' => $coleccionRespuestas));
+        return redirect()->route('tests.vertest', $idTest)->with('pregunta-eliminada', 'Pregunta eliminada correctamente.', array('eliminarPregunta'=>$eliminarPregunta, 'curso'=>$curso, 'test'=>$test,'coleccionPreguntas' => $coleccionPreguntas, 'coleccionRespuestas' => $coleccionRespuestas));
         /* return view('profesor/tests.vertest', array('eliminarPregunta'=>$eliminarPregunta, 'curso'=>$curso, 'test'=>$test,'coleccionPreguntas' => $coleccionPreguntas, 'coleccionRespuestas' => $coleccionRespuestas)); */
     }
 
