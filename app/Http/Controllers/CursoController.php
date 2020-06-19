@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use App\Curso;
 use App\Alumna;
 
@@ -39,12 +40,29 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
+        
+        /* Validamos que no se agregue un curso que ya existe: */
+        $validator = Validator::make($request->all(), [
+            'name' => 'unique:cursos,nombrecurso',
+        ]);
+
+        
+        /* Si la validación falla, mostramos mensaje de error: */
+        if($validator->fails()) {
+            
+            $failedRules = $validator->failed();
+
+            return redirect()->route('cursos.index')->with('datos-no-guardados',  '');
+            /* return back()->withInput($request->input())->withErrors($validator); */
+
+        }
+
         $nuevoCurso = new Curso();
 
         $nuevoCurso->nombrecurso = $request->name;
         $nuevoCurso->save();
 
-        return redirect()->route('cursos.index')->with('datos', 'Registro editado correctamente.');
+        return redirect()->route('cursos.index')->with('datos-guardados',  'Registro actualizado correctamente.');
     }
 
     /**
@@ -86,13 +104,27 @@ class CursoController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        /* Validamos que no se agregue un curso que ya existe: */
+         $validator = Validator::make($request->all(), [
+            'name' => 'unique:cursos,nombrecurso',
+        ]);
+
         
+        /* Si la validación falla, mostramos mensaje de error: */
+        if($validator->fails()) {
+            $failedRules = $validator->failed();
+
+            return back()->withInput($request->input())->withErrors($validator);
+
+        }
+
         $curso = Curso::find($id);
 
         $curso->nombrecurso = $request->name;
         $curso->save();
-
-        return redirect()->route('cursos.index')->with('datos', 'Registro editado correctamente.', 'curso', $curso);
+        
+        return redirect()->route('cursos.index')->with('datos-actualizados', 'Registro actualizado correctamente.', 'curso', $curso);
     }
 
     /**
