@@ -56,16 +56,6 @@
                                 nuevo curso</button>
                             
                         </div>
-                        @if(session('datos'))
-                        <br>
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            {{session('datos')}}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <br>
-                        @endif
                         <div class="card-body">
 
                             <table class="table table-bordered table-striped dt-responsive" width="100%"
@@ -132,7 +122,66 @@
     <!-- /.content -->
 
 </div>
+{{-- CONTROL DE ERRORES Y VALIDACIÓN --}}
 
+ {{-- Mensaje saliente si se ha guardado un registro correctamente--}}
+ @if(Session::has('datos-guardados'))
+
+ <script>
+     notie.alert({
+     
+     type: 1,
+     text: '¡Registro guardado correctamente!',
+     time: 7
+ 
+   })
+ 
+ </script>
+
+ @endif
+{{-- Mensaje saliente si se ha actualizado un registro correctamente--}}
+@if(Session::has('datos-no-guardados'))
+
+<script>
+    notie.alert({
+    
+    type: 3,
+    text: '¡Ya existe ese curso!',
+    time: 7
+
+  })
+
+</script>
+
+@endif
+ {{-- Mensaje saliente si se ha actualizado un registro correctamente--}}
+@if(Session::has('datos-actualizados'))
+
+<script>
+    notie.alert({
+    
+    type: 1,
+    text: '¡Registro actualizado correctamente!',
+    time: 7
+
+  })
+
+</script>
+
+@endif
+ {{-- Mensaje de error cuando se añade un alumno con un nombre de usuario que ya existe en la base de datos --}}
+ @error('nombrecurso')
+ <script>
+     notie.alert({
+     
+     type: 3,
+     text: '¡Ese curso ya existe!',
+     time: 7
+ 
+   })
+ 
+ </script>
+ @enderror
 {{--  VENTANA MODAL PARA AGREGAR NUEVO CURSO  --}}
 
 <div class="modal" id="crearCurso">
@@ -314,6 +363,5 @@
         @endif
     @endif
 @endif
-
 
 @endsection
